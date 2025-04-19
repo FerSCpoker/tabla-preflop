@@ -1,14 +1,73 @@
 
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tabla Preflop</title>
-    <script defer src="index.js"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Selector de Tablas Preflop</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8f9fa;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      font-size: 18px;
+      padding: 12px 24px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    table {
+      margin: 40px auto;
+      border-collapse: collapse;
+    }
+    td {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .push { background-color: #28a745; color: white; }
+    .call { background-color: #ffc107; }
+    .fold { background-color: #17a2b8; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Seleccioná el tipo de tabla preflop</h1>
+  <a href="cash/index.html"><button class="btn">Cash Game</button></a>
+  <a href="torneos/index.html"><button class="btn">Torneos</button></a>
+
+  <h2 style="margin-top: 50px;">Ejemplo de Rango Preflop</h2>
+  <table>
+    <tr><td class="push">AA</td><td class="push">AK</td><td class="push">AQ</td><td class="call">AJ</td><td class="fold">A9</td></tr>
+    <tr><td class="push">KK</td><td class="push">KQ</td><td class="call">KJ</td><td class="fold">KT</td><td class="fold">K9</td></tr>
+    <tr><td class="push">QQ</td><td class="call">QJ</td><td class="call">QT</td><td class="fold">Q9</td><td class="fold">Q8</td></tr>
+    <tr><td class="push">JJ</td><td class="call">JT</td><td class="fold">J9</td><td class="fold">J8</td><td class="fold">J7</td></tr>
+    <tr><td class="push">TT</td><td class="call">T9</td><td class="fold">T8</td><td class="fold">T7</td><td class="fold">T6</td></tr>
+  </table>
+
+  <div style="margin-top: 20px;">
+    <h3>Leyenda de colores:</h3>
+    <ul style="list-style: none; padding-left: 0;">
+      <li><span style="display:inline-block;width:20px;height:20px;background:#28a745;margin-right:8px;"></span> Verde: Push</li>
+      <li><span style="display:inline-block;width:20px;height:20px;background:#ffc107;margin-right:8px;"></span> Amarillo: Call</li>
+      <li><span style="display:inline-block;width:20px;height:20px;background:#17a2b8;margin-right:8px;"></span> Celeste: Limp o Fold</li>
+    </ul>
+  </div>
+</body>
 </html>
